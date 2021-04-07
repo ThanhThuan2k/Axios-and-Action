@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Help me</h1>
+
+@section Scripts{ 
+	<script src="~/lib/axios/axios.js"></script>
+	<script>
+		var url = '/home/check';
+		axios.post(url, { name: "yourname" }).then(response => {
+			console.log(response);
+		});
+	</script>
+}
